@@ -3,7 +3,6 @@ import axios from "axios";
 import TextField from "@material-ui/core/TextField";
 import "./LogIn.css";
 import $ from "jquery";
-import PasswordField from "material-ui-password-field";
 import Button from "@material-ui/core/Button";
 import Modal from "react-awesome-modal";
 import GoogleLogin from "react-google-login";
@@ -76,7 +75,6 @@ class LogIn extends Component {
   };
 
   deleteUser = (email) => {
-    //    axios.delete('http://52.15.163.114:8080/deleteUser/'+ email).then(res=>{
     axios
       .delete("http://localhost:8080/deleteUser/" + email)
       .then((res) => {
@@ -120,7 +118,6 @@ class LogIn extends Component {
         console.log(err);
       });
   };
-  // toggle = () => this.setState((currentState) => ({show: !currentState.show}));
 
   logInFunction = () => {
     console.log(this.state);
@@ -129,7 +126,6 @@ class LogIn extends Component {
     axios
       .post("http://localhost:8080/login", logIn)
       .then((res) => {
-        //axios.post('http://localhost:8080/login', logIn).then(res=>{
         console.log(res);
         this.toggle();
         this.profilUser(this.state.email);
@@ -281,25 +277,6 @@ class LogIn extends Component {
                 LogIn
               </Button>
             </div>
-            {/* <Modal
-              visible={this.state.visible}
-              width="300"
-              height="200"
-              effect="fadeInUp"
-              onClickAway={() => this.closeModal()}
-            >
-              <div>
-                <h1>Login failed!</h1>
-                <p>Email sau parola gresite!</p>
-                <Button
-                  variant="outlined"
-                  color="primary"
-                  onClick={() => this.closeModal()}
-                >
-                  Close
-                </Button>
-              </div>
-            </Modal> */}
             <div className="butonGoogle">
               <GoogleLogin
                 id="btn_LogIn"
@@ -345,25 +322,6 @@ class LogIn extends Component {
                   >
                     Actualizare date
                   </Button>
-                  {/* <Modal
-                    visible={this.state.visible}
-                    width="300"
-                    height="200"
-                    effect="fadeInUp"
-                    onClickAway={() => this.closeModal()}
-                  >
-                    <div>
-                      <h1>Operatie realizata cu succes</h1>
-                      <p>Datele tale au fost actualizate!</p>
-                      <Button
-                        variant="outlined"
-                        color="primary"
-                        onClick={() => this.closeModal()}
-                      >
-                        Close
-                      </Button>
-                    </div>
-                  </Modal> */}
                 </div>
                 <div className="button">
                   <Button
@@ -385,25 +343,6 @@ class LogIn extends Component {
                   >
                     Dezvactivare cont{" "}
                   </Button>
-                  {/* <Modal
-                    visible={this.state.visible}
-                    width="300"
-                    height="200"
-                    effect="fadeInUp"
-                    onClickAway={() => this.closeModal()}
-                  >
-                    <div>
-                      <h1>Operatie realizata cu succes</h1>
-                      <p>Contul a fost sters!</p>
-                      <Button
-                        variant="outlined"
-                        color="primary"
-                        onClick={() => this.closeModal()}
-                      >
-                        Close
-                      </Button>
-                    </div>
-                  </Modal> */}
                 </div>
                 <div className="button">
                   <Button

@@ -85,7 +85,6 @@ class AdaugaFeedback extends Component {
 
   addFeedback = () => {
     const feedback = this.state;
-    //    axios.post('http://52.15.163.114:8080/createFeedback',feedback).then(res=>{
     axios
       .post("http://localhost:8080/createFeedback", feedback)
       .then((res) => {
@@ -126,7 +125,6 @@ class AdaugaFeedback extends Component {
           <div className="mijlocTransport">
             Mijloc de transport:
             <select
-
               value={this.state.mijloc_transport}
               onChange={this.handleChangeMijlocTransport}
             >
