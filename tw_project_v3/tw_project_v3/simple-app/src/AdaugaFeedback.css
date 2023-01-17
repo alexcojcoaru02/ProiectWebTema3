@@ -1,0 +1,25 @@
+.title {
+    background-color: #736184;
+    height: calc(100%-25px);
+    padding: 25px;
+    font-size: 25px;
+    color: #FFFFFF;
+}
+
+.continut {
+    padding: 30px;
+    background-color: #C1C7E6;
+    color: #000000;
+    height: 600px;
+    position: relative;
+   
+}
+
+.observatii{
+    padding-top: 10px;
+    border-radius: 2px;
+}
+
+.mijlocTransport {
+    padding-top: 10px;
+}

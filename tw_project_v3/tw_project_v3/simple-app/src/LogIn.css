@@ -1,0 +1,40 @@
+
+.leftContent {
+   float: left;
+   height: 100%;
+   width: 50%;
+}
+
+.rightContent {
+    float: right;
+    height: 100%;
+    width: 50%;
+}
+
+.button {
+    padding-top: 30px;
+}
+
+.passwordClass{
+    padding-top: 15px;
+    width: calc(100%-60px);
+    /* padding-left: 60px; */
+    position: relative;
+}
+
+.butonGoogle {
+    padding-top: 30px;
+}
+
+.butonFacebook {
+    padding-top: 30px;
+}
+
+.continutLogIn {
+    padding: 20px;
+    background-color: #C1C7E6;
+    color: #000000;
+    height: 700px;
+    position: relative;
+   
+}
